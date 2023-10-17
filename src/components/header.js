@@ -8,7 +8,7 @@ export default function Header(){
     const { firebase } =useContext(FirebaseContext);
     const {user} = useContext(UserContext);
 
-    console.log("user", user);
+    // console.log("user", user);
 
     return (
         <header className='h-16 bg-white border-b border-gray-primary mb-8'>
@@ -44,7 +44,16 @@ export default function Header(){
                             </>
                         ): (
                             <>
-
+                                <Link to={CONSTROUTES.LOGIN} >
+                                    <button type='button' className='bg-blue-medium font-bold text-sm rounded text-white w-20 h-8'>
+                                        Log In
+                                    </button>
+                                </Link>
+                                <Link to={CONSTROUTES.SIGN_UP}>
+                                    <button type='button' className='font-bold text-sm rounded text-blue-medium w-20 h-8'>
+                                        Sign Up
+                                    </button>
+                                </Link>
                             </>
                         )
                         }

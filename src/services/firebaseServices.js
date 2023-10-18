@@ -41,3 +41,25 @@ export async function getSuggestedAccounts(userId, following){
 
     return filteredResult;
 } 
+
+
+export async function updateLoggedInUserFollowing(loggedInUserDocId, profileId, isFollowingProfile){
+    return firebase
+    .firestore()
+    .collection('users')
+    .doc(loggedInUserDocId)
+    .update({
+        following: isFollowingProfile ? FieldValue.arrayRemove(profileId) : FieldValue.arrayUnion(profileId)
+    });
+}
+
+
+export async function updateFollowedUserFollowers(spDocId, loggedInUserDocId, isFollowingProfile){
+    return firebase
+    .firestore()
+    .collection('users')
+    .doc(spDocId)
+    .update({
+        followers: isFollowingProfile ? FieldValue.arrayRemove(loggedInUserDocId) : FieldValue.arrayUnion(loggedInUserDocId)
+    });
+}

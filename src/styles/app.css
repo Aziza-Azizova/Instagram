@@ -542,6 +542,9 @@ video {
 .mt-2 {
   margin-top: 0.5rem;
 }
+.mt-4 {
+  margin-top: 1rem;
+}
 .mt-5 {
   margin-top: 1.25rem;
 }
@@ -608,6 +611,9 @@ video {
 .grid-cols-4 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
+.flex-row {
+  flex-direction: row;
+}
 .flex-col {
   flex-direction: column;
 }
@@ -622,6 +628,9 @@ video {
 }
 .gap-4 {
   gap: 1rem;
+}
+.gap-5 {
+  gap: 1.25rem;
 }
 .rounded {
   border-radius: 0.25rem;

@@ -28,5 +28,8 @@ module.exports = {
     plugins: [],
     future: {
         removeDeprecatedGapUtilities: true
+    },
+    variants: {
+        display: ['group-hover']
     }
 }

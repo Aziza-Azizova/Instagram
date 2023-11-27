@@ -1,10 +1,10 @@
 import React from 'react';
-import useUser from '../../hooks/use-user';
+import UseUser from '../../hooks/use-user';
 import User from './user'
 import Suggestions from './suggestions'
 
 export default function Sidebar(){
-    const { user: {fullName, username, userId, following, docId} } = useUser();
+    const { user: {fullName, username, userId, following, docId} } = UseUser();
 
     return (
         <div>

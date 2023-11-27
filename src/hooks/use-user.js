@@ -2,7 +2,7 @@ import React, {useState, useEffect, useContext} from "react";
 import UserContext from "../context/user";
 import { getUserByAuth } from "../services/firebaseServices";
 
-export default function useUser() {
+export default function UseUser() {
     const [activeUser, setActiveUser] = useState({});
     const { user } = useContext(UserContext);
 
